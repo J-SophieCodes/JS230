@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="stylesheet_2.css" />
+  </head>
+  <body>
+    <div class="composer">
+      <textarea placeholder="Enter your message"></textarea>
+      <p class="counter"></p>
+      <button type="submit">Post Message</button>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const MAX = 140;
+        let textarea = document.querySelector('textarea');
+        let countUpdate = document.querySelector('.counter');
+        let button = document.querySelector('button');
+
+        textarea.onkeyup = () => {
+            let count = textarea.value.length;
+            countUpdate.innerText = `${MAX - count} characters remaining`
+            
+            let invalid = count > MAX;
+            textarea.classList.toggle('invalid', invalid);
+            button.disabled = invalid;
+          };
+      });
+    </script>
+  </body>
+</html>
