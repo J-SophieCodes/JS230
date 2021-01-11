@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <div id="elem1">1
+      <section id="elem2">2
+        <article id="elem3">3
+          <main id="elem4">4
+          </main>
+        </article>
+      </section>
+    </div>
+    <script>
+      let elem1 = document.querySelector('#elem1');
+
+      elem1.addEventListener('click', event => alert(event.target.tagName));
+      elem1.addEventListener('click', event => alert(event.currentTarget.tagName));
+    </script>
+  </body>
+</html>
+
+<!--
+  When the main element is clicked:
+  1. The first click event listener of the div element listening on the 
+     bubbling phase, alerting the tagname of the target element (main)
+  2. The second click event listener of the div element listening on the 
+     bubbling phase, alerting the tagname of the element on which the listener is attached (div)
+-->

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <div id="elem1">1
+      <div id="elem2">2
+        <div id="elem3">3
+          <div id="elem4">4
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let elem1 = document.querySelector('#elem1');
+      let elem4 = document.querySelector('#elem4');
+
+      elem1.addEventListener('click', event => alert(event.currentTarget.id), true);
+      elem4.addEventListener('click', event => alert(event.currentTarget.id));
+    </script>
+  </body>
+</html>

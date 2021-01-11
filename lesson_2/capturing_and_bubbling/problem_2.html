@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <div class="d1 pick">1
+      <main class="d2 pick">2
+        <div class="d3">3
+          <section class="d4 pick">4
+          </section>
+        </div>  
+      </main>
+    </div>
+    <script>
+      let divs = document.querySelectorAll('.pick');
+
+      for(let index = 0; index < divs.length; index += 1) {
+        divs[index].addEventListener('click', highlightThis, true);
+      }
+          
+      function highlightThis(e) {
+        alert(`${this.className} ${e.currentTarget.tagName}`);
+      }
+
+      document.querySelector('.d3').addEventListener('click', highlightThis, false);
+    </script>
+  </body>
+</html>
