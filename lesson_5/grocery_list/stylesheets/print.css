@@ -1,0 +1,4 @@
+@media print {
+  form { display: none; }
+  #printarea { display: block; }
+}
