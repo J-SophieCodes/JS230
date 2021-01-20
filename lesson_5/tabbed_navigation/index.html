@@ -12,83 +12,54 @@
       <h1>Women In Tech Summit</h1>
       <h2>2021 Sponsorship</h2>
     </header>
+
     <nav>
       <ul>
         <p>Choose the way you'd like to support WITS:</p>
-        <li><a href="#" data-block="platinum">Platinum Sponsors</a></li>
-        <li><a href="" data-block="gold">Gold Sponsors</a></li>
-        <li><a href="#" data-block="silver">Silver Sponsors</a></li>
-        <li><a href="#" data-block="bronze">Bronze Sponsors</a></li>
       </ul>      
     </nav>
+
     <section>
       <article class="about">
         <h2>About</h2>
         <p>WITS, the only technical conference with all women speakers, is the conference for women working in and with technology. Through sessions tackling the latest trends in technology and innovating your career, WITS is on the cutting edge of topics leading the technology industry.</p>
-          
         <p>Join us in celebrating WITS 10th Anniversary with two virtual summits, monthly connect events, and a 10th anniversary celebration, designed to educate, inspire and connect women in tech.</p>
-      
         <p>All profits generated from each event support the non-profit TechGirlz.org and its ongoing mission to inspire middle school girls to explore the possibilities of technology to empower future careers.
         </p>
       </article>
-
-      <article data-block="platinum">
-        <h2>Platinum Sponsorship</h2>
-        <h3>$75,000</h3>
-        <ul>
-          <li>Recognition at all WITS events in 2021 - 2 summits, 11 monthly Connect events, plus the 10th Anniversary Celebration</li>
-          <li>Opportunity to customize sponsorship with WITS</li>
-          <li>Year long direct communication with the WITS community via WITS newsletter and WITS event app</li>
-          <li>National social media and press recognition</li>
-          <li>Prominent exhibition space via the event app at WITS 2021 Virtual Summits - to include personalized sponsor page and premium banner placement throughout the app</li>
-          <li>Digital recognition at all WITS 2021 Connect events and digital and physical recognition at the in-person WITS 10th Anniversary Celebration</li>
-          <li>Personalized connection with quality potential hires</li>
-          <li>Featured profile or interview on WITS Medium and/or in WITS newsletter</li>
-          <li>1-Minute Video “commercial” provided by sponsor company to be played during the WITS 2021 Virtual Summits</li>
-        </ul>
-      </article>
-      
-      <article data-block="gold">
-        <h2>Gold Sponsorship</h2>
-        <h3>$25,000</h3>
-        <ul>
-          <li>Prominent Recognition at selected WITS 2021 Virtual Summit(s)</li>
-          <li>Prominent logo placement on digital marketing materials and in the event app</li>
-          <li>Personalized sponsor page in the event app for the selected virtual summit(s)</li>
-          <li>Logo and link on event website</li>
-          <li>Dedicated social media posts</li>
-          <li>Profile on WITS Medium and/or in WITS newsletter </li>
-        </ul>
-      </article>
-
-      <article data-block="silver">
-        <h2>Silver Sponsorship</h2>
-        <h3>$15,000</h3>
-        <ul>
-          <li>Sponsorship recognition for selected WITS 2021 Virtual Summit(s)</li>
-          <li>Logo placement on digital materials for virtual summit</li>
-          <li>Social media mentions across WITS social media properties</li>
-          <li>Personalized sponsor page in the event app for the selected WITS 2021 Virtual Summit(s) </li>
-        </ul>
-      </article>
-      
-      <article data-block="bronze">
-        <h2>Bronze Sponsorship</h2>
-        <h3>$7,000</h3>
-        <ul>
-          <li>Sponsorship recognition for selected WITS 2021 Virtual Summit(s)</li>
-          <li>Logo placement on digital materials for selected WITS 2021 Virtual Summit</li>
-          <li>Social media mentions across WITS social media properties</li>
-          <li>Sponsor listing in virtual summit event app</li>
-        </ul>
-      </article>
     </section>
+
     <footer>
       <a href=https://womenintechsummit.net/wp-content/uploads/2020/09/2021-WITS-Sponsor-Deck.pdf>View the detailed brochure</a>
       |
       <a href="https://womenintechsummit.net/">Learn more about WITS 2021</a>
       <p>&#169;SophieCodes2021</p>
     </footer>
+
+    <script id="navList" type="text/x-handlebars">
+      {{#each levels}}
+        <li><a href="#" data-block="{{name}}">{{capitalize name}} Sponsors</a></li>
+      {{/each}}
+    </script>
+
+    <script id="articleList"  type="text/x-handlebars">
+      {{#each levels}}
+      {{> article}}
+      {{/each}}
+    </script>
+
+    <script id="article" type="text/x-handlebars">
+      <article data-block="{{name}}">
+        <h2>{{capitalize name}} Sponsorship</h2>
+        <h3>{{amount}}</h3>
+        <ul>
+          {{#each bullets}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </article>
+    </script>
+
     <script src="javascript.js"></script>
   </body>
 </html>
