@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Photo Gallery</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script src="slideshow.js"></script>
+  </head>
+  <body>
+    <header class="column">
+      <h1>My Photo Gallery</h1>
+    </header>
+    
+    <main>
+      <figure class="column">
+        <img id="image" src="https://via.placeholder.com/1200x900.jpg/" />
+        <figcaption>Example Photo</figcaption>
+      </figure>
+      <section class="column">
+        <ul class="thumbnails">
+          <li class="selected">
+            <a href="">
+              <img src="https://via.placeholder.com/1200x900.jpg/" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="http://via.placeholder.com/1200x900.jpg/fcba03/fc0339" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="http://via.placeholder.com/1200x900.jpg/3ecf89/fff" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="http://via.placeholder.com/1200x900.jpg/fff/3e69cf" />
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    
+    <footer class="column">
+      <a href="https://github.com/J-SophieCodes">
+        <i class="fa fa-github" aria-hidden="true"></i>
+        <span>J-SophieCodes</span>
+      </a>
+    </footer>
+  </body>
+</html>

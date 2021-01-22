@@ -267,6 +267,7 @@ footer li a.instagram { background-position: 0 -138px; }
 }
 
 .modal {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -302,6 +303,7 @@ footer li a.instagram { background-position: 0 -138px; }
 }
 
 .overlay {
+  display: none;
   z-index: 1000;
   position: fixed;
   top: 0;
