@@ -5,4 +5,4 @@ $(function() {
     $('#image').stop().attr('src', $(this).attr('src')).hide().fadeIn();
     $(this).closest('li').toggleClass('selected');
   });
-})
+});

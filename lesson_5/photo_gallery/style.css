@@ -60,7 +60,7 @@ figcaption {
 
 footer a {
   display: flex;
-  font-size: 5vh;
+  font-size: 4vh;
   text-decoration: none;
   color: inherit;
   justify-content: center;
@@ -68,7 +68,7 @@ footer a {
 }
 
 footer span {
-  font-size: 3vh;
+  font-size: 2vh;
   padding: 0 10px;
 }
 
