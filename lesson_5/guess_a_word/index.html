@@ -5,6 +5,9 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script src="javascripts/game.js"></script>
   </head>
   <body>
     <main>
@@ -15,20 +18,14 @@
         <div id="apples"></div>
       </div>
 
-      <p id="message">You've won!</p>
+      <p id="message"></p>
 
       <div id="spaces">
         <h2>Word:</h2>
-        <span>d</span>
-        <span></span>
-        <span></span>
       </div>
 
       <div id="guesses">
         <h2>Guesses:</h2>
-        <span>d</span>
-        <span></span>
-        <span></span>
       </div>
 
       <div id="github">
@@ -38,6 +35,14 @@
         </a>
       </div>
     </main>
-    <script src=""></script>
+
+    <script id="span" type="text/x-handlebars">
+      <span>{{letter}}</span>
+    </script>
+
+    <script id="replay" type="text/x-handlebars">
+      <a href="#" id="replay">Play again?</a>
+    </script>
+    
   </body>
 </html>
